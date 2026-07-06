@@ -79,19 +79,6 @@ dir
 ```
 http://localhost:8081
 ```
-
----
-
-## 📸 Screenshots
-
-- Login Page
-- Dashboard
-- Add Timetable
-- Search Timetable
-- Timetable Records
-
-(Add screenshots here later.)
-
 ---
 
 ## 🚀 Future Enhancements
