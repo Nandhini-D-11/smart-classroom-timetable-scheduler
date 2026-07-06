@@ -77,7 +77,7 @@ public String home(Model model) {
         model.addAttribute("timetables",
                 timetableService.getAllTimetables());
 
-        return "redirect:/?success";
+        return "index";
     }
 
     @GetMapping("/delete/{id}")

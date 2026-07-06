@@ -176,10 +176,10 @@ Fill in the details below to create a new classroom timetable.
 </div>
 
     <div th:if="${message}"
-     class="alert alert-success alert-dismissible fade show"
+     th:class="${message.contains('successfully')} ? 'alert alert-success alert-dismissible fade show' : 'alert alert-danger alert-dismissible fade show'"
      role="alert">
 
-    <strong>✅ Success!</strong>
+    <strong th:text="${message.contains('successfully')} ? '✅ Success!' : '❌ Error!'"></strong>
 
     <span th:text="${message}"></span>
 

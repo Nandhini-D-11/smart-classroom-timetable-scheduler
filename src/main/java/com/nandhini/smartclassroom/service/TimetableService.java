@@ -39,6 +39,21 @@ public class TimetableService {
                 return "Classroom is already occupied at this time!";
             }
         }
+        
+        boolean duplicate =
+        timetableRepository.existsByDepartmentAndSemesterAndSubjectAndFacultyAndClassroomAndDayAndTimeSlot(
+                timetable.getDepartment(),
+                timetable.getSemester(),
+                timetable.getSubject(),
+                timetable.getFaculty(),
+                timetable.getClassroom(),
+                timetable.getDay(),
+                timetable.getTimeSlot());
+
+if (duplicate) {
+    return "Timetable already exists!";
+}
+
 
         timetableRepository.save(timetable);
 
